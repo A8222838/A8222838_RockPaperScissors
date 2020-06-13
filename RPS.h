@@ -14,7 +14,7 @@ public:
 	int getPlayer()const;//回傳玩家生命值
 	static int getPoint();//回傳額外分數
 	int com()const;//電腦出拳
-	int player()const;//玩家出拳
+	int playeuser()const;//玩家出拳
 	int dual();//判定勝負
 private:
 	int comLive;//電腦生命

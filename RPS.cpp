@@ -36,7 +36,7 @@ int RPS::com() const {
 	return x;
 }
 //玩家出拳
-int RPS::player() const {
+int RPS::playeuser() const {
 	int x;
 	cout << "可以出拳囉XD: ";
 	cin >> x;
@@ -45,14 +45,19 @@ int RPS::player() const {
 		return x;
 	}
 	else {
+<<<<<<< HEAD
 		cout << "輸囉~!!\n小孩不要氣餒~ 鼻要哭哭~ !\n再你在一次機會\n" << "---------------------------\n";
 		return player();
+=======
+		cout << "輸囉~!!\n小孩不要氣餒~鼻要哭哭~!\n再你在一次機會\n" << "---------------------------\n";
+		return playeuser();
+>>>>>>> de5ec07d127e9fc6316c5d15cfbdae0df2bf6214
 	}
 }
 //判定勝負	
 int RPS::dual() {
 	int x = com();
-	int y = player();
+	int y = playeuser();
 	if (x == y) {
 		cout << "再來一次 " << endl;
 		cout << "---------------------------\n";
