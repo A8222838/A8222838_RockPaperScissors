@@ -45,7 +45,7 @@ int RPS::player() const {
 		return x;
 	}
 	else {
-		cout << "輸囉~!!\n小孩不要氣餒~鼻要哭哭~!\n再你在一次機會\n" << "---------------------------\n";
+		cout << "輸囉~!!\n小孩不要氣餒~ 鼻要哭哭~ !\n再你在一次機會\n" << "---------------------------\n";
 		return player();
 	}
 }
@@ -54,7 +54,7 @@ int RPS::dual() {
 	int x = com();
 	int y = player();
 	if (x == y) {
-		cout << "再來一次: " << endl;
+		cout << "再來一次 " << endl;
 		cout << "---------------------------\n";
 		system("pause");
 		return dual();
