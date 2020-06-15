@@ -16,15 +16,15 @@ void RPS::setCom(int comLive) {
 void RPS::setPlayer(int playerLive) {
 	this->playerLive = playerLive;
 }
-//回傳電腦生命值
+//回傳至電腦生命值
 int RPS::getCom() const {
 	return comLive;
 }
-//回傳玩家生命值
+//回傳至玩家生命值
 int RPS::getPlayer() const {
 	return playerLive;
 }
-//回傳額外分數
+//回傳至額外分數
 int RPS::getPoint() {
 	return point;
 }
@@ -45,22 +45,22 @@ int RPS::player() const {
 		return x;
 	}
 	else {
-		cout << "輸囉~!!\n小孩不要氣餒~鼻要哭哭~!\n再你在一次機會\n" << "---------------------------\n";
+		cout << "鼻要亂出~!!\n小孩不要森七七~ 鼻要哭哭~ !\n再給你在一次機會\n" << "---------------------------\n";
 		return player();
 	}
 }
-//判定勝負	
+//判定猜拳勝負	
 int RPS::dual() {
 	int x = com();
 	int y = player();
 	if (x == y) {
-		cout << "再來一次: " << endl;
+		cout << "再來一次機會呦 " << endl;
 		cout << "---------------------------\n";
 		system("pause");
 		return dual();
 	}
 	else if ((x == 2 && y == 0) or (x == 1 && y == 2) or (x == 0 && y == 1)) {
-		cout << "電腦得分: " << endl;
+		cout << "電腦得分 " << endl;
 		cout << "---------------------------\n";
 		switch (x) {
 		case 0:
@@ -79,7 +79,7 @@ int RPS::dual() {
 		}
 	}
 	else {
-		cout << "玩家得分: " << endl;
+		cout << "玩家得分 " << endl;
 		cout << "---------------------------\n";
 		switch (y) {
 		case 0:
@@ -98,4 +98,4 @@ int RPS::dual() {
 		}
 	}
 }
-int RPS::point = 20;
+int RPS::point = 30;
