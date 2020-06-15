@@ -53,16 +53,15 @@ void setDate(RPS& a) {
 	}
 	cout << endl;
 }
-//主函式
-int main() {
-	start();//輸出標頭
-	rule();//輸出規則
-	RPS rps;//宣告rps
-	setDate(rps);//難易度調整
+//遊戲運行(迴圈
+void game(RPS rps) {
 	while (rps.getCom() > 0 and rps.getPlayer() > 0 and rps.getPoint() > 0) {
 		cout << "玩家生命值: " << rps.getPlayer() << "\n電腦生命值: " << rps.getCom() << "\n額外點數: " << rps.getPoint() << "\n\n";//生命值顯示
 		rps.dual();//猜拳判定
 	}//迴圈
+}
+//勝負判定
+void winOrLose(RPS rps) {
 	if (rps.getCom() <= 0) cout << "\n贏了很猛~  繼續~\n\n";//
 	else if (rps.getPlayer() <= 0) cout << "\n 輸給電腦  太弱了唷~~ \n\n";
 	else {
@@ -70,6 +69,15 @@ int main() {
 		else if (rps.getCom() > rps.getPlayer()) cout << "\n輸給電腦~  太弱了唷~  這樣不行唷 > < \n\n";
 		else cout << "\n看來你還要多多練習唷  ㄎㄎ \n\n";
 	}
+}
+//主函式
+int main() {
+	start();//輸出標頭
+	rule();//輸出規則
+	RPS rps;//宣告rps
+	setDate(rps);//難易度調整
+	game(rps);//遊戲運行(迴圈
+	winOrLose(rps);//勝負判定
 	system("pause");
 	return 0;
 }
