@@ -9,10 +9,17 @@ void start() {
 //規則
 void  rule() {
 	cout << "\n[ 0為石頭 ] [ 1為剪刀 ] [ 2為布 ]"
+<<<<<<< HEAD
 		<< "\n出布贏 [ 得5分 ]\n出剪刀贏 [ 得2分 ]\n出石頭贏 [ 沒得分 ]"
 		<< "\n出布輸 [ 扣5分 ]\n出剪刀輸 [ 扣2分 ]\n出石頭輸 [ 不扣分 ]"
 		<< "\n直到一方分數歸零或是額外分數歸零時"
 		<< "\n{ ( [ 遊戲結束 ] ) }"
+=======
+		<< "\n出布贏 [得5分]\n出剪刀贏 [得2分]\n出石頭贏 [沒得分]"
+		<< "\n出布輸 [扣5分]\n出剪刀輸 [扣2分]\n出石頭輸 [不扣分]"
+		<< "\n直到一方分數歸零或是額外分數歸零時"
+		<< "\n{([遊戲結束])}"
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 		<< "\n分數高的獲勝"
 		<< "\n\n---------------------------\n";
 	system("pause");
@@ -26,7 +33,11 @@ void setDate(RPS& a) {
 	cin >> x;
 	cout << "\n---------------------------";
 	if (x > 3 or x < 1) {
+<<<<<<< HEAD
 		cout << "\n[輸入錯誤]\n麻煩再來一次"<< "\n---------------------------";
+=======
+		cout << "\n輸入錯誤\n麻煩再來一次"<< "\n---------------------------";
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 		return setDate(a);
 	}
 	else {
@@ -34,19 +45,31 @@ void setDate(RPS& a) {
 		case 1:
 			a.setCom(10);
 			a.setPlayer(10);
+<<<<<<< HEAD
 			cout << "\n您選擇了 [低血量]";
+=======
+			cout << "\n您選擇了低血量";
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 			cout << "\n---------------------------";
 			break;
 		case 2:
 			a.setCom(20);
 			a.setPlayer(20);
+<<<<<<< HEAD
 			cout << "\n您選擇了 [中血量]";
+=======
+			cout << "\n您選擇了中血量";
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 			cout << "\n---------------------------";
 			break;
 		case 3:
 			a.setCom(30);
 			a.setPlayer(30);
+<<<<<<< HEAD
 			cout << "\n您選擇了 [高血量]";
+=======
+			cout << "\n您選擇了高血量";
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 			cout << "\n---------------------------";
 			break;
 		}
@@ -56,18 +79,31 @@ void setDate(RPS& a) {
 //遊戲運行(迴圈
 void game(RPS rps) {
 	while (rps.getCom() > 0 and rps.getPlayer() > 0 and rps.getPoint() > 0) {
+<<<<<<< HEAD
 		cout << "玩家[生命值] : " << rps.getPlayer() << "\n電腦[生命值] : " << rps.getCom() << "\n[額外點數] : " << rps.getPoint() << "\n\n";//生命值顯示
+=======
+		cout << "玩家生命值: " << rps.getPlayer() << "\n電腦生命值: " << rps.getCom() << "\n額外點數: " << rps.getPoint() << "\n\n";//生命值顯示
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 		rps.dual();//猜拳判定
 	}//迴圈
 }
 //勝負判定
 void winOrLose(RPS rps) {
+<<<<<<< HEAD
 	if (rps.getCom() <= 0) cout << "\n贏了很猛呦~  繼續~\n\n";//
 	else if (rps.getPlayer() <= 0) cout << "\n 輸給電腦  太弱了唷~~ 要再加油~~\n\n";
 	else {
 		if (rps.getCom() < rps.getPlayer()) cout << "\n贏了484很厲害呀~  ㄚㄚㄚ~\n\n";
 		else if (rps.getCom() > rps.getPlayer()) cout << "\n輸給電腦~  太弱了唷~  這樣母湯唷 > < \n\n";
 		else cout << "\n看來你還要多多練習唷~~  ㄎㄎ \n\n";
+=======
+	if (rps.getCom() <= 0) cout << "\n贏了很猛~  繼續~\n\n";//
+	else if (rps.getPlayer() <= 0) cout << "\n 輸給電腦  太弱了唷~~ \n\n";
+	else {
+		if (rps.getCom() < rps.getPlayer()) cout << "\n贏了很厲害484呀~  ㄚㄚㄚ~\n\n";
+		else if (rps.getCom() > rps.getPlayer()) cout << "\n輸給電腦~  太弱了唷~  這樣不行唷 > < \n\n";
+		else cout << "\n看來你還要多多練習唷  ㄎㄎ \n\n";
+>>>>>>> a21a4cb1e7f5723e0a73bfde384bbf5b466b7e09
 	}
 }
 //主函式
